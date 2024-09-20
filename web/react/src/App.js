@@ -9,17 +9,17 @@ import RotateCapt from "./components/RotateCapt";
 import {useGithub} from "./hooks/useGithub";
 
 function App() {
-  useGithub()
+  //useGithub()
 
   return (
     <div className="container">
-      <div style={{marginTop: "40px", display: "flex", alignItems: "center", justifyContent: "center"}}><ClickTextCapt/></div>
-      <div style={{marginTop: "40px", display: "flex", alignItems: "center", justifyContent: "center"}}><ClickShapeCapt/></div>
+      {/*<div style={{marginTop: "40px", display: "flex", alignItems: "center", justifyContent: "center"}}><ClickTextCapt/></div>*/}
+      {/*<div style={{marginTop: "40px", display: "flex", alignItems: "center", justifyContent: "center"}}><ClickShapeCapt/></div>*/}
       <div style={{marginTop: "40px", display: "flex", alignItems: "center", justifyContent: "center"}}><SlideCapt/></div>
       <div style={{marginTop: "40px", display: "flex", alignItems: "center", justifyContent: "center"}}><SlideRegionCapt/></div>
-      <div style={{marginTop: "40px", display: "flex", alignItems: "center", justifyContent: "center"}}><RotateCapt/></div>
+      {/*<div style={{marginTop: "40px", display: "flex", alignItems: "center", justifyContent: "center"}}><RotateCapt/></div>*/}
 
-      <div className="cap-tip">
+      {/*    <div className="cap-tip">
         <a href="https://github.com/wenlng/go-captcha/releases">
           <img src="https://img.shields.io/github/tag/wenlng/go-captcha.svg" alt="version"/>
         </a>
@@ -28,6 +28,9 @@ function App() {
         <a className="github-button" href="https://github.com/wenlng/go-captcha/fork" data-size="large"
            data-show-count="true" aria-label="Fork wenlng/go-captcha on GitHub">Fork</a>
       </div>
+        */}
+
+
     </div>
   );
 }

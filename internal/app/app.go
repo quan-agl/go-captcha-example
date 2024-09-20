@@ -13,18 +13,18 @@ import (
 func Start() {
 
 	// example: get captcha data
-	http.Handle("/api/go-captcha-data/click-basic", CORS(http.HandlerFunc(captdata.GetClickBasicCaptData)))
-	http.Handle("/api/go-captcha-data/click-shape", CORS(http.HandlerFunc(captdata.GetClickShapesCaptData)))
+	// http.Handle("/api/go-captcha-data/click-basic", CORS(http.HandlerFunc(captdata.GetClickBasicCaptData)))
+	// http.Handle("/api/go-captcha-data/click-shape", CORS(http.HandlerFunc(captdata.GetClickShapesCaptData)))
 	http.Handle("/api/go-captcha-data/slide-basic", CORS(http.HandlerFunc(captdata.GetSlideBasicCaptData)))
 	http.Handle("/api/go-captcha-data/slide-region", CORS(http.HandlerFunc(captdata.GetSlideRegionCaptData)))
-	http.Handle("/api/go-captcha-data/rotate-basic", CORS(http.HandlerFunc(captdata.GetRotateBasicCaptData)))
+	// http.Handle("/api/go-captcha-data/rotate-basic", CORS(http.HandlerFunc(captdata.GetRotateBasicCaptData)))
 
 	// example: post check data
-	http.Handle("/api/go-captcha-check-data/click-basic", CORS(http.HandlerFunc(checkdata.CheckClickData)))
-	http.Handle("/api/go-captcha-check-data/click-shape", CORS(http.HandlerFunc(checkdata.CheckClickData)))
+	// http.Handle("/api/go-captcha-check-data/click-basic", CORS(http.HandlerFunc(checkdata.CheckClickData)))
+	// http.Handle("/api/go-captcha-check-data/click-shape", CORS(http.HandlerFunc(checkdata.CheckClickData)))
 	http.Handle("/api/go-captcha-check-data/slide-basic", CORS(http.HandlerFunc(checkdata.CheckSlideData)))
 	http.Handle("/api/go-captcha-check-data/slide-region", CORS(http.HandlerFunc(checkdata.CheckSlideData)))
-	http.Handle("/api/go-captcha-check-data/rotate-basic", CORS(http.HandlerFunc(checkdata.CheckRotateData)))
+	// http.Handle("/api/go-captcha-check-data/rotate-basic", CORS(http.HandlerFunc(checkdata.CheckRotateData)))
 
 	// example: js+html+css
 	viewStatic := path.Join(helper.GetPWD(), "/web/native/")
@@ -32,7 +32,11 @@ func Start() {
 	http.Handle("/go-captcha-example/", http.StripPrefix("/go-captcha-example/", viewFsh))
 
 	// Example: vue
-	static := path.Join(helper.GetPWD(), "/web/vue/dist")
+	// static := path.Join(helper.GetPWD(), "/web/vue/dist")
+	// fsh := http.FileServer(http.Dir(static))
+	// http.Handle("/", http.StripPrefix("/", fsh))
+	// Example: vue
+	static := path.Join(helper.GetPWD(), "/web/react/build")
 	fsh := http.FileServer(http.Dir(static))
 	http.Handle("/", http.StripPrefix("/", fsh))
 

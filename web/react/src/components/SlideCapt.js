@@ -32,7 +32,7 @@ function SlideCapt() {
       onOpenChange={handler.visibleChangeEvent}
       forceRender={true}
       trigger="click">
-      <GoCaptcha.Button {...handler.state} clickEvent={handler.clickEvent} title={"点击进行滑动校验"}/>
+      <GoCaptcha.Button {...handler.state} clickEvent={handler.clickEvent} title={"Click to slide check"}/>
     </Popover>
   );
 }

@@ -32,7 +32,7 @@ function SlideRegionCapt() {
       onOpenChange={handler.visibleChangeEvent}
       forceRender={true}
       trigger="click">
-      <GoCaptcha.Button {...handler.state} clickEvent={handler.clickEvent} title={"点击进行区域滑动校验"}/>
+      <GoCaptcha.Button {...handler.state} clickEvent={handler.clickEvent} title={"Click to perform area sliding calibration"}/>
     </Popover>
   );
 }
