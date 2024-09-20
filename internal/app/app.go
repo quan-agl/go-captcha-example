@@ -27,9 +27,9 @@ func Start() {
 	// http.Handle("/api/go-captcha-check-data/rotate-basic", CORS(http.HandlerFunc(checkdata.CheckRotateData)))
 
 	// example: js+html+css
-	viewStatic := path.Join(helper.GetPWD(), "/web/native/")
-	viewFsh := http.FileServer(http.Dir(viewStatic))
-	http.Handle("/go-captcha-example/", http.StripPrefix("/go-captcha-example/", viewFsh))
+	// viewStatic := path.Join(helper.GetPWD(), "/web/native/")
+	// viewFsh := http.FileServer(http.Dir(viewStatic))
+	// http.Handle("/go-captcha-example/", http.StripPrefix("/go-captcha-example/", viewFsh))
 
 	// Example: vue
 	// static := path.Join(helper.GetPWD(), "/web/vue/dist")
